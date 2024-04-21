@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: head;
+    src: url('/assets/font/1.woff2');
+}
+
+@font-face {
+    font-family: sub;
+    src: url('/assets/font/2.woff2');
+}
+
+@font-face {
+    font-family: italic;
+    src: url('/assets/font/italic.woff2');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+    user-select: none;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: #f8f8f8;
+    position: relative;
+    overflow: hidden;
+}
+
+body #bg-cursor {
+    height: 50vh;
+    width: 50vh;
+    position: fixed;
+    border-radius: 50%;
+    background: #ff995a;
+    z-index: 1;
+}
+
+body .container {
+    /* background: #f8f8f8; */
+    backdrop-filter: blur(180px);
+    position: relative;
+    z-index: 2;
+}
+
+#main-header {
+    height: 5vw;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 3vw;
+    padding-top: 1vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#main-header .logo a {
+    text-decoration: none;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+#main-header .logo h6 {
+    font-size: 1.5vw;
+    font-weight: 500;
+    color: #242329;
+    height: 2.5vw;
+    overflow: hidden;
+    display: flex;
+}
+
+#main-header .logo .word span {
+    display: inline-block;
+}
+
+#main-header .logo img {
+    height: 40px;
+}
+
+#main-header .nav-icon {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    height: fit-content;
+    cursor: pointer;
+    mix-blend-mode: difference;
+}
+
+#main-header .nav-icon .svg {
+    height: 30px;
+    width: 30px;
+    background: #000;
+    border-radius: 50%;
+    color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-header .nav-icon label {
+    cursor: pointer;
+    mix-blend-mode: difference;
+}
+
+/* ......................MAIN-SECTION................... */
+main {
+    overflow-x: hidden;
+}
+
+/*.................. PARALLAX .................*/
+
+main #parallax {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#parallax .bg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#parallax .clouds {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+#parallax .clouds .cloud {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0.5;
+}
+
+#parallax .clouds .cloud:nth-child(1) {
+    left: 0;
+    z-index: 1;
+    opacity: 1;
+}
+
+#parallax .clouds .cloud:nth-child(3) {
+    right: 0;
+    z-index: 3;
+    opacity: 1;
+}
+
+#parallax .title {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    z-index: 9;
+}
+
+#parallax .title .line {
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 10px;
+    font-size: 1.5vw;
+}
+
+#parallax .title .line:nth-last-child(1) {
+    font-size: 8vw;
+    letter-spacing: 20px;
+    margin-top: 20px;
+}
+
+/*................ INTRO-SECTION ...............*/
+#intro-section {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    padding: 5vw;
+    display: flex;
+    align-items: center;
+}
+
+#intro-section .heading {
+    z-index: 2;
+}
+
+#intro-section .heading-line {
+    height: 102px;
+    overflow: hidden;
+}
+
+#intro-section .heading-line span {
+    display: inline-block;
+}
+
+#intro-section .min-heading {
+    font-family: head;
+    font-size: 1.5vw;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+#intro-section .max-heading {
+    font-family: sub;
+    font-size: 8vw;
+    text-transform: capitalize;
+    line-height: 7.5vw;
+    font-weight: 500;
+}
+
+#intro-section .stroke {
+    -webkit-text-stroke: 2px black;
+    color: transparent;
+    text-decoration: underline 5px;
+}
+
+#intro-section .intro-video {
+    position: absolute;
+    width: 50%;
+    height: 80%;
+    bottom: 0;
+    right: 5vw;
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#intro-section .intro-video video {
+    width: 10%;
+    height: 30%;
+    object-fit: cover;
+}
+
+/*............... PARALLAX-2ND ...............*/
+#parallax-sec {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    margin-top: 5vw;
+}
+
+#parallax-sec .bg {
+    width: 100%;
+    height: 100%;
+}
+
+#parallax-sec .bg .video {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#parallax-sec .video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#parallax-sec .bg .video::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.21);
+}
+
+#parallax-sec .content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0px 5vw;
+    gap: 30px;
+    position: absolute;
+    top: 0%;
+    left: 0px;
+}
+
+#parallax-sec .heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    width: 55%;
+}
+
+#parallax-sec .heading h2 {
+    font-family: sub;
+    font-size: 6.8vw;
+    text-transform: capitalize;
+    line-height: 6vw;
+    font-weight: 500;
+    color: #f8f8f8;
+}
+
+#parallax-sec .heading span {
+    font-family: head;
+    font-size: 1.3vw;
+    font-weight: 500;
+    color: #f8f8f8;
+}
+
+#parallax-sec .img {
+    height: 28vw;
+    width: 28vw;
+}
+
+#parallax-sec .img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/*............. MAGIC SECTION .............*/
+main .hover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vw;
+}
+
+main .hover>* {
+    font-size: 4vw;
+    font-weight: 200;
+}
+
+main .hover span {
+    display: inline-block;
+    transform: scale(1, -1);
+    height: 60px;
+}
+
+#magic {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3vw 5vw;
+}
+
+#magic .img-container {
+    height: 90%;
+    width: 95%;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#magic .img-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*................ HEADLINE SECTION ..............*/
+#headline {
+    height: 80vh;
+    width: 100vw;
+    white-space: nowrap;
+    padding: 5vw;
+    display: flex;
+    align-items: center;
+}
+
+#headline .head-txt {
+    font-size: 15vw;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 3px black;
+    letter-spacing: -5px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+/*............. FOOTER .............*/
+footer {
+    background: #111;
+    color: #f8f8f8;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    padding: 0px 5vw;
+}
+
+footer h5 {
+    font-size: 1.1vw;
+    font-weight: 400;
+}
+
+footer .logo {
+    height: 60px;
+    width: 60px;
+    margin-left: 30%;
+}
+
+footer .logo img {
+    height: 100%;
+    object-fit: contain;
+}
+
+footer .socials {
+    margin-left: 40%;
+    font-size: 2vw;
+    display: flex;
+    gap: 15%;
+}
+
+footer .socials a {
+    text-decoration: none;
+    color: #f8f8f8;
+}
+
+
+
+
+/*............................. MEDIA QUERIES ............................*/
+
+@media(max-width: 600px) {
+    body #bg-cursor {
+        display: none;
+    }
+
+    #main-header {
+        height: 20vw;
+    }
+
+    #main-header .logo a {
+        text-decoration: none;
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+
+    #main-header .logo h6 {
+        font-size: 6.5vw;
+        height: 9vw;
+    }
+
+    #main-header .nav-icon {
+        gap: 20px;
+    }
+
+    /*.................. PARALLAX .................*/
+
+    #parallax .clouds {
+        height: 50%;
+        top: 20%;
+    }
+
+    #parallax .clouds .cloud {
+        height: 60%;
+        width: 100%;
+        top: 10%;
+        opacity: 0.7;
+    }
+
+    #parallax .clouds .cloud:nth-child(3) {
+        right: 0;
+        z-index: 3;
+        opacity: 0.8;
+    }
+
+    #parallax .title .line {
+        font-size: 2.5vw;
+    }
+
+    #parallax .title .line:nth-last-child(1) {
+        font-size: 10vw;
+    }
+
+
+    /*................ INTRO-SECTION ...............*/
+    #intro-section {
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+        padding: 5vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #intro-section .heading {
+        z-index: 2;
+    }
+
+    #intro-section .heading-line {
+        height: 102px;
+        overflow: hidden;
+    }
+
+    #intro-section .heading-line span {
+        display: inline-block;
+    }
+
+    #intro-section .min-heading {
+        font-family: head;
+        font-size: 1.5vw;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+
+    #intro-section .max-heading {
+        font-family: sub;
+        font-size: 8vw;
+        text-transform: capitalize;
+        line-height: 7.5vw;
+        font-weight: 500;
+    }
+
+    #intro-section .stroke {
+        -webkit-text-stroke: 2px black;
+        color: transparent;
+        text-decoration: underline 5px;
+    }
+
+    #intro-section .intro-video {
+        position: absolute;
+        width: 50%;
+        height: 80%;
+        bottom: 0;
+        right: 5vw;
+        overflow: hidden;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #intro-section .intro-video video {
+        width: 10%;
+        height: 30%;
+        object-fit: cover;
+    }
+
+}
