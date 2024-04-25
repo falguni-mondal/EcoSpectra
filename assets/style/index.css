@@ -1,19 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 @font-face {
     font-family: head;
-    src: url('assets/font/1.woff2');
+    src: url('/assets/font/1.woff2');
 }
 
 @font-face {
     font-family: sub;
-    src: url('assets/font/2.woff2');
+    src: url('/assets/font/2.woff2');
 }
 
 @font-face {
     font-family: italic;
-    src: url('assets/font/italic.woff2');
+    src: url('/assets/font/italic.woff2');
 }
 
 * {
@@ -33,7 +32,7 @@ body {
 body {
     background: #f8f8f8;
     position: relative;
-    /*overflow: hidden;*/
+    overflow-x: hidden;
 }
 
 body #bg-cursor {
@@ -47,7 +46,7 @@ body #bg-cursor {
 
 body .container {
     /* background: #f8f8f8; */
-    backdrop-filter: blur(180px);
+    backdrop-filter: blur(150px);
     position: relative;
     z-index: 2;
 }
@@ -126,7 +125,7 @@ main #parallax {
     position: relative;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 #parallax .bg {
@@ -204,6 +203,8 @@ main #parallax {
 #intro-section .heading-line {
     height: 102px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
 #intro-section .heading-line span {
@@ -464,6 +465,10 @@ footer .socials a {
         height: 9vw;
     }
 
+    #main-header .logo .slide-logo {
+        width: 0;
+    }
+
     #main-header .nav-icon {
         gap: 20px;
     }
@@ -499,66 +504,118 @@ footer .socials a {
 
     /*................ INTRO-SECTION ...............*/
     #intro-section {
-        height: 100vh;
-        width: 100vw;
-        position: relative;
-        padding: 5vw;
-        display: flex;
+        height: 80vh;
         flex-direction: column;
-        align-items: center;
-    }
-
-    #intro-section .heading {
-        z-index: 2;
+        margin-top: 5vh;
     }
 
     #intro-section .heading-line {
-        height: 102px;
-        overflow: hidden;
-    }
-
-    #intro-section .heading-line span {
-        display: inline-block;
+        height: 9vh;
     }
 
     #intro-section .min-heading {
-        font-family: head;
-        font-size: 1.5vw;
-        font-weight: 500;
-        margin-bottom: 30px;
+        font-size: 3.5vw;
+        margin-bottom: 10px;
     }
 
     #intro-section .max-heading {
-        font-family: sub;
-        font-size: 8vw;
-        text-transform: capitalize;
-        line-height: 7.5vw;
-        font-weight: 500;
+        font-size: 15vw;
     }
 
     #intro-section .stroke {
-        -webkit-text-stroke: 2px black;
-        color: transparent;
-        text-decoration: underline 5px;
+        -webkit-text-stroke: 1.5px black;
+        text-decoration: underline 4px;
     }
 
     #intro-section .intro-video {
-        position: absolute;
-        width: 50%;
-        height: 80%;
-        bottom: 0;
-        right: 5vw;
-        overflow: hidden;
-        border-radius: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        width: 100%;
+        height: 50%;
+        right: 0;
+        padding: 0px 5vw;
     }
 
-    #intro-section .intro-video video {
-        width: 10%;
-        height: 30%;
-        object-fit: cover;
+    /*............... PARALLAX-2ND ...............*/
+    #parallax-sec {
+        height: 60vh;
+        margin-top: 8vh;
+    }
+
+    #parallax-sec .content {
+        justify-content: space-around;
+    }
+
+    #parallax-sec .heading {
+        gap: 10px;
+    }
+
+    #parallax-sec .heading h2 {
+        font-size: 8vw;
+        line-height: 8vw;
+    }
+
+    #parallax-sec .heading span {
+        font-size: 3.5vw;
+    }
+
+    #parallax-sec .img {
+        height: 30vw;
+        width: 30vw;
+    }
+
+    /*............. MAGIC SECTION .............*/
+    main .hover {
+        margin-top: 8vh;
+    }
+
+    main .hover>* {
+        font-size: 8vw;
+        font-weight: 200;
+    }
+
+    main .hover span {
+        height: 40px;
+    }
+
+    #magic {
+        height: 40vh;
+        padding: 0px 0px;
+    }
+
+    #magic .img-container {
+        height: 100%;
+        width: 100%;
+    }
+
+    /*................ HEADLINE SECTION ..............*/
+    #headline {
+        height: 50vh;
+        margin-top: 5vh;
+        overflow: hidden;
+    }
+
+    #headline .head-txt {
+        font-size: 30vw;
+        -webkit-text-stroke: 2px black;
+    }
+
+    /*............. FOOTER .............*/
+    footer {
+        align-items: start;
+        padding: 5vw;
+    }
+
+    footer h5 {
+        font-size: 3vw;
+    }
+
+    footer .logo {
+        height: 30px;
+        width: 30px;
+    }
+    footer .socials {
+        font-size: 4vw;
+        flex-direction: column;
+        gap: 13px;
     }
 
 }
