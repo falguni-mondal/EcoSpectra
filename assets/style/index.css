@@ -3,17 +3,17 @@
 
 @font-face {
     font-family: head;
-    src: url('/assets/font/1.woff2');
+    src: url('assets/font/1.woff2');
 }
 
 @font-face {
     font-family: sub;
-    src: url('/assets/font/2.woff2');
+    src: url('assets/font/2.woff2');
 }
 
 @font-face {
     font-family: italic;
-    src: url('/assets/font/italic.woff2');
+    src: url('assets/font/italic.woff2');
 }
 
 * {
