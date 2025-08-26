@@ -21,6 +21,7 @@
     box-sizing: border-box;
     font-family: 'poppins';
     user-select: none;
+    scrollbar-width: 10px;
 }
 
 html,
@@ -619,3 +620,4 @@ footer .socials a {
     }
 
 }
+
